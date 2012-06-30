@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>inversiones</title>
+<link rel="stylesheet" href="thumbnailviewer.css" type="text/css" />
+<script src="thumbnailviewer.js" type="text/javascript"></script>
+<link href="estilo1.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style type="text/css">
+
+<!--
+td {
+	font-family: verdana;
+	font-size: 10px;
+	color: #000000;
+	text-decoration: none;
+	border: none;
+}
+.text {
+	font-family: verdana;
+	font-size: 9px;
+	color: #000000;
+	text-decoration: none;
+	border: none;
+}
+img {
+	text-decoration: none;
+	border: none;
+}
+.green {
+	font-family: verdana;
+	font-size: 9px;
+	color: #5BA225;
+	text-decoration: underline;
+	border: none;
+	font-weight: bold;
+}
+.green1 {
+	font-family: verdana;
+	font-size: 10px;
+	color: #5BA225;
+	text-decoration: underline;
+	border: none;
+	font-weight: bold;
+}
+.orange {
+	font-family: verdana;
+	font-size: 9px;
+	font-weight: bold;
+	color: #FF8A00;
+	text-decoration: underline;
+}
+.orange1 {
+	font-family: verdana;
+	font-size: 10px;
+	font-weight: bold;
+	color: #FF8A00;
+	text-decoration: underline;
+}
+body {
+	background-image: url(imagenes/.jpg);
+}
+.Estilo11 {color: #000099}
+.Estilo28 {
+	color: #000099;
+	font-size: 14;
+	font-weight: bold;
+}
+
+-->
+</style></head>
+
+<body>
+<body>
+<table align="center" width="600">
+<tr>
+<td align="center"><font color="#000000" size="4" face="Arial, Helvetica, sans-serif">Reseсa Histуrica</font></td></tr>
+<tr><td align="justify"> <p>La Empresa "Construcciones e Inversiones R.D, esta ubicada en el municipio Girardot de maracay, Estado Aragua.Esta empresa esta integrada de forma sistemбtica y consta de una estructura adecuada dividida en departamenros los cuales son: Administracion, Gerencia General, Departamento de compra, Departamento de ventas</p>
+         <p>A principios del aсo 2009 tres personas unieron sus esfuerzos y sus ideas para crear una empresa destinada a prestar servicios en diferentes бreas, de esta manera se inicio con los diferenes trбmites legales para la creacion de la empresa que se cristalizo en el mes de marzo del mismo aсo. A partir de ese momento, se empezo a ofrecer sus servicios a diferentes empresas especialmente en el бrea de servicio de descarga materia prima y productos terminados, de esta manera con el transcurrir del tiempo Construcciones e Inversiones R.D se ha ido desarrollando de una manera sostenida, el cual ha sido posible graciasa la confianza que se ha ganado de todos los clientes que se tienen actualmente.</p>
+       
+</td></tr>
+</table>
+ <marquee><img src="imagenes/im1.jpg" width="150" height="180"/><td align="center"><font color="#0000FF" size="3" face="Arial, Helvetica, sans-serif">Luchamos dia a dia por el liderazgo en Construcciуn e Inversiуn </font></td></tr><img src="imagenes/im2.jpg" width="150" height="180"/></marquee>
+</tr>
+<td width="850" ><iframe name="sistema" width="1070" height="800" style="background:#FFFFFF"  src=".html"></iframe>
+      <div align="center"></div></td>
+      </tr>
+                    </table>
+  <table align="center"   background="imagenes/fondoa.jpg" width="1250">
+
+ 
+
+      </table>
+    </div></td>
+  </tr>
+</table>
+</body>
+</html>

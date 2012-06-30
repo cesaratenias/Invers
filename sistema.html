@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title></title>
+	<link rel="stylesheet" href="menu_style.css" type="text/css" />
+</head>
+<style type="text/css">
+
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+.sidebarmenu ul{
+width:160px;
+margin: 0;
+padding: 0;
+list-style-type: none;
+font: bold 16x Verdana;
+border-bottom: 1px solid #ccc;
+border-style: solid solid none solid;
+border-color: #0e69be;
+border-size: 1px;
+border-width: 1px;
+
+}
+
+.sidebarmenu ul li{
+position: relative;
+}
+
+/* Top level menu links style */
+.sidebarmenu ul li a{
+
+text-decoration: none;
+display: block;
+overflow: auto; /*force hasLayout in IE7 */
+color: white;
+text-decoration: none;
+padding: 6px;
+border-bottom: 1px solid #778;
+border-right: 1px solid #778;
+
+}
+
+.sidebarmenu ul li a:link, .sidebarmenu ul li a:visited, .sidebarmenu ul li a:active{
+background-image:url(images/v3.jpg); /*background of tabs (default state)*/
+}
+
+.sidebarmenu ul li a:visited{
+color: white;
+}
+
+.sidebarmenu ul li a:hover{
+background-color: black;
+}
+
+/*Sub level menu items */
+.sidebarmenu ul li ul{
+position: absolute;
+width: 170px; /*Sub Menu Items width */
+top: 0;
+visibility: hidden;
+}
+
+
+
+	.sidebarmenu li a:link, #menu li a:visited {
+	color: #0e69be;
+	display: block;
+	background: url(../menu/images/v3.jpg);
+	background-repeat:no-repeat;
+	padding: 8px 0 0 ;
+	}
+
+	.sidebarmenu li a:hover {
+	color: #0e69be;
+	background: url(../menu/v3.jpg) 0 -32px;
+	background-repeat:no-repeat;
+	padding: 4 x 0 0 1px;
+	}
+	
+.sidebarmenu li a:active {
+	color: #0e69be;
+	background: url(../menu/v3.jpg) 0 -64px;
+	background-repeat:no-repeat;
+	padding: 8px 0 0 10px;
+	}
+
+ 
+/* Holly Hack for IE \*/
+* html .sidebarmenu ul li { float: left; height: 1%; }
+* html .sidebarmenu ul li a { height: 1%; }
+/* End */
+
+</style>
+
+<script type="text/javascript">
+
+//Nested Side Bar Menu (Mar 20th, 09)
+//By Dynamic Drive: http://www.dynamicdrive.com/style/
+
+var menuids=["sidebarmenu1"] //Enter id(s) of each Side Bar Menu's main UL, separated by commas
+
+function initsidebarmenu(){
+for (var i=0; i<menuids.length; i++){
+  var ultags=document.getElementById(menuids[i]).getElementsByTagName("ul")
+    for (var t=0; t<ultags.length; t++){
+    ultags[t].parentNode.getElementsByTagName("a")[0].className+=" subfolderstyle"
+  if (ultags[t].parentNode.parentNode.id==menuids[i]) //if this is a first level submenu
+   ultags[t].style.left=ultags[t].parentNode.offsetWidth+"px" //dynamically position first level submenus to be width of main menu item
+  else //else if this is a sub level submenu (ul)
+    ultags[t].style.left=ultags[t-1].getElementsByTagName("a")[0].offsetWidth+"px" //position menu to the right of menu item that activated it
+    ultags[t].parentNode.onmouseover=function(){
+    this.getElementsByTagName("ul")[0].style.display="block"
+    }
+    ultags[t].parentNode.onmouseout=function(){
+    this.getElementsByTagName("ul")[0].style.display="none"
+    }
+    }
+  for (var t=ultags.length-1; t>-1; t--){ //loop through all sub menus again, and use "display:none" to hide menus (to prevent possible page scrollbars
+  ultags[t].style.visibility="visible"
+  ultags[t].style.display="none"
+  }
+  }
+}
+
+if (window.addEventListener)
+window.addEventListener("load", initsidebarmenu, false)
+else if (window.attachEvent)
+window.attachEvent("onload", initsidebarmenu)
+
+</script>
+
+
+<body bgcolor="#ffffff">
+<div align="center">
+    <table align="center" width="1200" height="70">
+    <tr>
+      <td><img src="imagenes/fondo.jpg" width="1250" height="200" /></td>
+    </tr>
+                    </table>
+                    <div class="menu">
+		<ul>
+                        <li><a href="index.php" >Inicio</a></li>
+                        <li><a href="#" >informacion</a>
+				<ul>
+					<li><a href="resena.html" target="index">Nuestra Rese&ntilde;a Hist&oacute;rica</a></li>
+					<li><a href="vision.html" target="index">Nuestra Visi&oacute;n</a></li>
+					<li><a href="mision.html" target="index">Nuestra Misi&oacute;n</a></li>
+					</ul>
+                        <li><a href="ingreso.php">  Menu de Ingreso</a>
+							
+
+			<li><a href="/contact/contact.php">Manual de Usuario</a></li>
+
+          </li>		  
+	
+			<li><a href="/contact/contact.php">Galeria</a></li>
+          </li>
+<ul>
+<li><a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=11&ct=1338427786&rver=6.1.6206.0&wp=MBI&wreply=http:%2F%2Fmail.live.com%2Fdefault.aspx&lc=2058&id=64855&mkt=es-US&cbcxt=mai&snsc=1" target="_blank"><img src="imagenes/hotmail.jpg" width="50" height="28" /></a></li>
+</ul>
+
+
+
+		</ul>
+	</div>
+  <table width="10" height="300" border="1"  background="imagenes/fondoi.jpg">
+    <tr >
+      <td width="100" align="left" valign="top">
+      
+<div class="sidebarmenu">
+<ul id="sidebarmenu1">
+<li><a href="sistema.html">Inicio</a></li>
+<li><a href="cliente.php" target="sistema">Registro de clientes</a></li>
+<li><a href="trabajador.php" target="sistema">Registro Trabajador</a></li>
+<li><a href="proveedor.php" target="sistema">Registro Proveedores</a></li>
+<li><a href="reg_notas.php" target="sistema">Gestion Compras</a></li>
+<li><a href="calculo.php" target="sistema">calculo de ventas</a></li>
+<li><a href=".php" target="sistema">Analisis de precios</a></li>
+
+<li><a href="#">Reporte</a></li>
+<li><a href="#">Usuario</a>
+  <ul>
+  <li><a href="reg_usuario.php" target="sistema">Registrar Usuario</a></li>
+  <li><a href="act.usuario.php" target="sistema">Cambiar Clontraseña</a> </li>
+</ul>
+</li>
+</div></td>
+      <td width="850" ><iframe name="sistema" width="1070" height="800" style="background:#FFFFFF"  src=".html"></iframe>
+      <div align="center"></div></td>
+      </tr>
+                    </table>
+  <table align="center"   background="imagenes/fondoa.jpg" width="1250">
+    <tr>
+      <td height="50" align="center"> <font  color="#FFFFFF">Diseñado por: TSU. Maica Rutbell,TSU. Maria Palacio  </font></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
+
+</body>
+</html>
