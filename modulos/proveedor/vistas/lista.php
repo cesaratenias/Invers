@@ -20,9 +20,9 @@ include '../../../conexion.php';
     </head>
     <body>        
         <div align="center">
-            <h2 align="center">Lista de Equipos</h2>
+            <h2 align="center">Lista de Proveedores</h2>
             <div align="left">    
-                <a href="nuevo.php" target="sistema"><img alt="nuevo" width="12" height="12" src="../../../imagenes/nuevo.png" />Nuevo</a>
+                <a href="registro.php" target="sistema"><img alt="nuevo" width="12" height="12" src="../../../imagenes/nuevo.png" />Nuevo</a>
             </div>
             <table id="listado" class="table">
                 <thead>
@@ -30,22 +30,22 @@ include '../../../conexion.php';
                         <th>C&eacute;dula</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
+                        <th>Empresa</th>
                         <th>Telefono</th>
-                        <th>Direcci&oacute;n</th>
                         <th>Acciones</th>    
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                     $rows = mysql_num_rows($sql);
-                    while ($resCl = mysql_fetch_array($sql)) {
+                    while ($resProv = mysql_fetch_array($sql)) {
                         ?>
                         <tr>
-                            <td><?php echo $resCl['cedula'] ?></td>
-                            <td><?php echo $resCl['nombre'] ?></td>
-                            <td>BsF. <?php echo $resCl['apellido'] ?></td>
-                            <td><?php echo $resCl['telefono'] ?></td>
-                            <td><?php echo $resCl['direccion'] ?></td>
+                            <td><?php echo $resProv['cedula'] ?></td>
+                            <td><?php echo $resProv['nombre'] ?></td>
+                            <td>BsF. <?php echo $resProv['apellido'] ?></td>
+                            <td>BsF. <?php echo $resProv['empresa'] ?></td>
+                            <td><?php echo $resProv['telefono'] ?></td>
                             <td>
                                 <a href="#"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
                                 <a href="#"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
