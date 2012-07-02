@@ -26,6 +26,7 @@
                 <th>Nombre</th>
                 <th>Descuento</th>
                 <th>Costo</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
