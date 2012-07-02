@@ -8,28 +8,21 @@
             <td><?php echo date('d-m-Y'); ?></td>
         </tr>
         <tr>
-            <th>C&oacute;digo</th>
+            <td>Nombre</td>
             <td>
-                <input required type="text" name="codigo" autofocus/>
+                <input required type="text" name="nombre" autofocus />
             </td>
         </tr>
         <tr>
-            <th>Nombre</th>
+            <td>Convenio</td>
             <td>
-                <input required minlength="3" type="text" name="nombre" />
+                <input required type="text" name="convenio" id="rif"/>
             </td>
         </tr>
         <tr>
-            <th>Descuento</th>
+            <td>Total</td>
             <td>
-                <input required type="text" name="descuento"/>
-            </td>
-        </tr>
-        <tr>
-            <th>Costo</th>
-            <td>
-                <input required type="text" name="costo"/>
-            </td>
+                <input required type="text" name="total"/>
         </tr>
     </table>
     <br/>

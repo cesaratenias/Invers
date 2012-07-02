@@ -1,8 +1,7 @@
 <?php
 include '../../../conexion.php';
-$selMat = "SELECT mg.*, dg.*, o.* FROM m_gestion_c mg 
-          INNER JOIN obra o ON re.id = ma.id_recurso
-          INNER JOIN d_destion_c dg ON re.id = ma.id_recurso
-          where tipo = 1";
-$sql = mysql_query($selMat);
+$selGes = "SELECT mg.*, dg.*, o.* FROM obra o 
+          INNER JOIN m_gestion_c mg ON o.id = mg.id_obra
+          INNER JOIN d_destion_c dg ON mg.id = dg.id_maestro";
+$sql = mysql_query($selGes);
 ?>

@@ -16,7 +16,7 @@
     <a href="registro.php" title="Nuevo"><img alt="nuevo" src="libs/img/add.png" /></a>
 </div>
 <br/>
-<table id="listado">
+<table id="listado" class="table">
     <thead>
         <tr>
             <th>Fecha</th>
@@ -36,10 +36,10 @@
                 <td><?php echo $resGes['descripcion'] ?></td>
                 <td><?php echo $resGes['convenio'] ?></td>
                 <td>
-                    <a href="#"><img width="13" height="13" src="libs/img/ver.png" />&nbsp;Consultar</a><br />
-                    <a href="#"><img width="13" height="13" src="libs/img/edit.png" />&nbsp;Editar</a><br />
+                    <a href="#"><img width="13" height="13" src="#" />&nbsp;Consultar</a><br />
+                    <a href="#"><img width="13" height="13" src="#" />&nbsp;Editar</a><br />
                     <a onclick="if(confirm('Esta seguro que desea borrar el registro?')){
-                            location.href='#' }"><img width="13" height="13" src="libs/img/dele.png" />&nbsp;Borrar</a>
+                            location.href='#' }"><img width="13" height="13" src="#" />&nbsp;Borrar</a>
                 </td>
             </tr>
             <?php
