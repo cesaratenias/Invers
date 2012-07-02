@@ -26,6 +26,7 @@
             <th>Descripcion</th>
             <th>Convenio</th>
             <th>Total</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
