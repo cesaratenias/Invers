@@ -22,12 +22,12 @@
     <tbody>
         <?php
         $rows = mysql_num_rows($sql);
-        while ($resIns = mysql_fetch_array($sql)) {
+        while ($resEl = mysql_fetch_array($sql)) {
             ?>
             <tr>
-                <td><?php echo $resIns['cod'] ?></td>
-                <td><?php echo $resIns['descripcion'] ?></td>
-                <td>BsF. <?php echo $resIns['costo'] ?></td>
+                <td><?php echo $resEl['cod'] ?></td>
+                <td><?php echo $resEl['descripcion'] ?></td>
+                <td>BsF. <?php echo $resEl['costo'] ?></td>
                 <td>
                     <a href="#"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
                     <a href="#"><img width="12" height="12" src="../../../imagenes/edita.png" />Editar</a><br />
