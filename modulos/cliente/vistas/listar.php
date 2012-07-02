@@ -1,6 +1,6 @@
 <?php
-include_once '../modelos/listar.php';
 include '../../../conexion.php';
+include_once '../modelos/listar.php';
 ?>
 <html>
     <head>
@@ -47,8 +47,8 @@ include '../../../conexion.php';
                             <td><?php echo $resCl['telefono'] ?></td>
                             <td><?php echo $resCl['direccion'] ?></td>
                             <td>
-                                <a href="#"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
-                                <a href="#"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
+                                <a href="consultar.php&id=<?php echo $resCl['id'] ?>"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
+                                <a href="nuevo.php&acc=&edicion&id=<?php echo $resCl['id'] ?>"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
                                 <a href="#"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
                             </td>
                         </tr>
