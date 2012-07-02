@@ -1,7 +1,7 @@
 <?php include '../../../conexion.php'; ?>
-<script type="text/javascript" src="../../../js/jquery.min.js"></script>
-<script type="text/javascript" src="../../../js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="../../../js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="./../../js/jquery.js"></script>
+<script type="text/javascript" src="../../../js/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery.dataTables.min.js"></script>
 <script>
     $(document).ready(function() {
         $('#listado').dataTable({
@@ -32,7 +32,7 @@
             ?>
             <tr>
                 <td><?php echo $resMat['cod'] ?></td>
-                <td><?php echo $resMat['nombre'] ?></td>
+                <td><?php echo $resMat['descripcion'] ?></td>
                 <td><?php echo $resMat['descuento'] ?></td>
                 <td><?php echo $resMat['costo'] ?></td>
                 <td>

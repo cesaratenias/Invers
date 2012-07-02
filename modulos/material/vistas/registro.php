@@ -1,5 +1,4 @@
 <?php include '../../../conexion.php'; ?>
-<?php include 'modulos/proveedor/modelos/consultar.php'; ?>
 
 <h2 align="center">Registro de Material</h2>
 <form>
@@ -30,6 +29,6 @@
         </tr>
     </table>
     <br/>
-    <center><input type="submit"/>&nbsp;&nbsp;<input type="button"value="Regresar" onclick="location.href='modulos/material/vistas/lista.php'" /></center>
+    <center><input type="submit" value="Guardar"/>&nbsp;&nbsp;<input type="button"value="Regresar" onclick="location.href='lista.php'" /></center>
     <br />
 </form>
