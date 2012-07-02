@@ -25,41 +25,7 @@ $clave=$_REQUEST['clave'];
 
 					$result=mysql_query($sql,$conexion)or die ($sql .mysql_error()."" ) ;
 					$num_rows = mysql_num_rows($result); //echo $num_rows; exit;
-					if($num_rows>0){
-							$Data= mysql_fetch_array($Buscar); //echo $Data['nivel']; exit;
-							
-							switch($Data['nivel']){
-							
-								case 1:	
-									session_start();
-									$_SESSION["login"]=$login;
-									$_SESSION["clave"]=$clave;									
-									include ("sesion.php");
-									$accion="recargaadmi";
-									$Mensaje="Bienvenido al Sistema..";
-
-								break;
-								case 2:
-									session_start();
-									include ("sesion.php");
-									$accion="recargadocen";	
-									$Mensaje="Bienvenido al Sistema..";
-									$_SESSION["login"]=$login;
-									$_SESSION["clave"]=$clave;
-								break;
-								case 3:
-									session_start();
-									include ("sesion.php");
-									$accion="recargasecre";
-									$Mensaje="Bienvenido al Sistema..";
-									$_SESSION["login"]=$login;
-									$_SESSION["clave"]=$clave;
-								break;	
-							}
-
-
-
-					} elseif($num_rows == 0) {
+					if($num_rows == 0) {
 
 						$accion="errorlogeo";
 						$Mensaje="Usuario o Clave Incorrecta";
