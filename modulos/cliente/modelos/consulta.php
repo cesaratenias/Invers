@@ -1,5 +1,6 @@
 <?php
 include '../../../conexion.php'; 
-$sqlCc="SELECT * FROM persona WHERE tipo='1';";
+$id = $_GET['id'];
+$sqlCc="SELECT * FROM persona WHERE id = $id;";
 $sql= mysql_query($sqlCc);
 ?>
