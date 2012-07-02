@@ -8,6 +8,7 @@ include '../../../conexion.php';
         <script type="text/javascript" src="../../../js/jquery-ui-1.8.16.custom.min.js"></script>
         <script type="text/javascript" src="../../../js/jquery.dataTables.min.js"></script>
         <link type="text/css" href="../../../css/jquery.dataTables.css" rel="stylesheet" />
+        <link type="text/css" href="../../../css/estilo.css" rel="stylesheet" />
         <script>
             $(document).ready(function() {
                 $('#listado').dataTable({
@@ -22,7 +23,7 @@ include '../../../conexion.php';
             <div align="left">    
                 <a href="nuevo.php" target="sistema"><img alt="nuevo" width="12" height="12" src="../../../imagenes/nuevo.png" />Nuevo</a>
             </div>
-            <table id="listado" >
+            <table id="listado" class="table">
                 <thead>
                     <tr>
                         <th>C&oacute;digo</th>
