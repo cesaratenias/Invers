@@ -13,7 +13,7 @@
 
 <h2 align="center">Gestion de compras</h2>
 <div class="barra-tool">
-    <a href="registro.php" title="Nuevo"><img alt="nuevo" src="libs/img/add.png" /></a>
+    <a href="registro.php" title="Nuevo"><img alt="nuevo" src="../../../imagenes/nuevo.png" /></a>
 </div>
 <br/>
 <table id="listado" class="table">
@@ -36,10 +36,10 @@
                 <td><?php echo $resGes['descripcion'] ?></td>
                 <td><?php echo $resGes['convenio'] ?></td>
                 <td>
-                    <a href="#"><img width="13" height="13" src="#" />&nbsp;Consultar</a><br />
-                    <a href="#"><img width="13" height="13" src="#" />&nbsp;Editar</a><br />
+                    <a href="#"><img width="13" height="13" src="../../../imagenes/consulta.png" />&nbsp;Consultar</a><br />
+                    <a href="#"><img width="13" height="13" src="../../../imagenes/edita.gif" />&nbsp;Editar</a><br />
                     <a onclick="if(confirm('Esta seguro que desea borrar el registro?')){
-                            location.href='#' }"><img width="13" height="13" src="#" />&nbsp;Borrar</a>
+                            location.href='#' }"><img width="13" height="13" src="../../../imagenes/borrar.png" />&nbsp;Borrar</a>
                 </td>
             </tr>
             <?php
