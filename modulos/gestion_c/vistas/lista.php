@@ -13,7 +13,7 @@
 
 <h2 align="center">Gestion de compras</h2>
 <div class="barra-tool">
-    <a href="registro.php" title="Nuevo"><img alt="nuevo" src="libs/img/add.png" /></a>
+    <a href="registro.php" title="Nuevo"><img alt="nuevo" src="../../../imagenes/nuevo.png" />Nuevo</a>
 </div>
 <br/>
 <table id="listado" class="table">
