@@ -16,13 +16,50 @@
         <tr>
             <td>Convenio</td>
             <td>
-                <input required type="text" name="convenio" id="rif"/>
+                <input required type="text" name="convenio" />
             </td>
         </tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
         <tr>
+            <td>Materiales</td>
+            <td>
+                <input required type="text" name="mate" />
+            </td>
+            <td>Costo</td>
+            <td>
+                <input required type="text" name="cant" size="4"/>
+            </td>
+        </tr>
+        <tr><td></td></tr>
+        <tr>
+            <td>Equipos</td>
+            <td>
+                <input required type="text" name="mate" />
+            </td>
+            <td>Costo</td>
+            <td>
+                <input required type="text" name="cant" size="4"/>
+            </td>
+        </tr>
+        <tr><td></td></tr>
+        <tr>
+            <td>Mano de Obra</td>
+            <td>
+                <input required type="text" name="mate" />
+            </td>
+            <td>Costo</td>
+            <td>
+                <input required type="text" name="cant" size="4"/>
+            </td>
+        </tr>        
+        <tr><td><br></td></tr>
+        <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td>Total</td>
             <td>
-                <input required type="text" name="total"/>
+                <input required type="text" name="total" size="5"/>
         </tr>
     </table>
     <br/>
