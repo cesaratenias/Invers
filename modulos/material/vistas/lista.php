@@ -10,7 +10,7 @@
             "sPaginationType": "full_numbers"
         });
 </script>
-
+<center>
 <h2 align="center">Lista de materiales</h2>
 <div class="barra-tool">
     <a href="registro.php" title="Nuevo"><img alt="nuevo" src="libs/img/add.png" /></a>
@@ -48,3 +48,4 @@
     </tbody>
 </table>
 <br/>
+</center>
