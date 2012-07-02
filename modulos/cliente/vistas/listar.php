@@ -27,21 +27,25 @@ include '../../../conexion.php';
             <table id="listado" class="table">
                 <thead>
                     <tr>
-                        <th>C&oacute;digo</th>
+                        <th>C&eacute;dula</th>
                         <th>Nombre</th>
-                        <th>Costo</th>
+                        <th>Apellido</th>
+                        <th>Telefono</th>
+                        <th>Direcci&oacute;n</th>
                         <th>Acciones</th>    
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                     $rows = mysql_num_rows($sql);
-                    while ($resEl = mysql_fetch_array($sql)) {
+                    while ($resCl = mysql_fetch_array($sql)) {
                         ?>
                         <tr>
-                            <td><?php echo $resEl['cod'] ?></td>
-                            <td><?php echo $resEl['descripcion'] ?></td>
-                            <td>BsF. <?php echo $resEl['costo'] ?></td>
+                            <td><?php echo $resCl['cedula'] ?></td>
+                            <td><?php echo $resCl['nombre'] ?></td>
+                            <td>BsF. <?php echo $resCl['apellido'] ?></td>
+                            <td><?php echo $resCl['telefono'] ?></td>
+                            <td><?php echo $resCl['direccion'] ?></td>
                             <td>
                                 <a href="#"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
                                 <a href="#"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
