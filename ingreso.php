@@ -38,28 +38,7 @@ if (isset($_REQUEST["login"]) && $_REQUEST["clave"] == TRUE) {
 ?>
 
 <script language="javascript">
-    function validar(form){
-        return(validausuario(form.login.value)&& validaclave(form.clave.value));}
-
-    function validausuario(login){
-        var cadena="Por Favor, Introduzca El Nombre del Usuario\n";
-        if (document.fvalida.login.value.length==0){
-            alert(cadena)
-            document.fvalida.login.focus()
-            return false;
-        } else
-            return true;
-    }
-    function validaclave(clave){
-        var cadena="Introduzca La Clave\n";
-        if (document.fvalida.clave.value.length==0){
-            alert(cadena)
-            document.fvalida.clave.focus()
-            return false;
-        } else
-            return true;
-    }
-
+   
     function recargaadmi(){
         window.location="sistema.html"
         return true;
@@ -76,8 +55,6 @@ if (isset($_REQUEST["login"]) && $_REQUEST["clave"] == TRUE) {
         window.location="ingreso.php"
         return true;
     }
-
-
 </script>
 <html>
     <head>
