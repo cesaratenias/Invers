@@ -2,6 +2,8 @@
 <script type="text/javascript" src="./../../js/jquery.js"></script>
 <script type="text/javascript" src="../../../js/jquery-ui-1.8.16.custom.min.js"></script>
 <script type="text/javascript" src="../../../js/jquery.dataTables.min.js"></script>
+        <link type="text/css" href="../../../css/jquery.dataTables.css" rel="stylesheet" />
+        <link type="text/css" href="../../../css/estilo.css" rel="stylesheet" />
 <script>
     $(document).ready(function() {
         $('#listado').dataTable({
@@ -10,9 +12,9 @@
             "sPaginationType": "full_numbers"
         });
 </script>
-
+ <div align="center">
 <h2 align="center">Gestion de compras</h2>
-<div class="barra-tool">
+<div align="left">
     <a href="registro.php" title="Nuevo"><img alt="nuevo" src="../../../imagenes/nuevo.png" />Nuevo</a>
 </div>
 <br/>
@@ -23,6 +25,7 @@
             <th>Nombre</th>
             <th>Descripcion</th>
             <th>Convenio</th>
+            <th>Total</th>
         </tr>
     </thead>
     <tbody>
@@ -35,16 +38,16 @@
                 <td><?php echo $resGes['nombre'] ?></td>
                 <td><?php echo $resGes['descripcion'] ?></td>
                 <td><?php echo $resGes['convenio'] ?></td>
+                <td><?php echo $resGes['total'] ?></td>
                 <td>
-                    <a href="#"><img width="13" height="13" src="#" />&nbsp;Consultar</a><br />
-                    <a href="#"><img width="13" height="13" src="#" />&nbsp;Editar</a><br />
-                    <a onclick="if(confirm('Esta seguro que desea borrar el registro?')){
-                            location.href='#' }"><img width="13" height="13" src="#" />&nbsp;Borrar</a>
-                </td>
+                    <a href="#"><img width="13" height="13" src="../../../imagenes/consulta.png" />&nbsp;Consultar</a><br />
+                    <a href="#"><img width="13" height="13" src="../../../imagenes/edita.gif" />&nbsp;Editar</a><br />
+                    <a href="#"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
+                            </td>
             </tr>
             <?php
         }
         ?>
     </tbody>
 </table>
-<br/>
+<br/></div>
