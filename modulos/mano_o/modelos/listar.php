@@ -1,5 +1,5 @@
 <?php 
 include '../../../conexion.php'; 
-$sqlEl="SELECT * FROM recurso WHERE tipo='2';";
+$sqlEl="SELECT * FROM recurso WHERE tipo='3';";
 $sql= mysql_query($sqlEl);
 ?>
