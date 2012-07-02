@@ -44,7 +44,7 @@
                     <a href="#"><img width="13" height="13" src="../../../imagenes/consulta.png" />&nbsp;Consultar</a><br />
                     <a href="#"><img width="13" height="13" src="../../../imagenes/edita.gif" />&nbsp;Editar</a><br />
                     <a href="#"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
-                            </td>
+               </td>
             </tr>
             <?php
         }
