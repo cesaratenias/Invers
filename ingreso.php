@@ -1,8 +1,8 @@
 <?php
 include_once 'conexion.php';
+if (isset($_REQUEST["login"]) && $_REQUEST["clave"]== TRUE){
 $login = $_REQUEST['login'];
 $clave = $_REQUEST['clave'];
-if (isset($_REQUEST["login"]) && $_REQUEST["clave"]== TRUE){
 
 $sql = "Select * from usuario WHERE login='$login' AND clave='$clave'";
 $Buscar = mysql_query("SELECT * FROM usuario WHERE login = '$login' AND clave = '$clave'");
