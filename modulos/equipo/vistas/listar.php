@@ -43,7 +43,7 @@ include '../../../conexion.php';
                             <td>BsF. <?php echo $resEl['costo'] ?></td>
                             <td>
                                 <a href="#"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
-                                <a href="#"><img width="12" height="12" src="../../../imagenes/edita.png" />Editar</a><br />
+                                <a href="#"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
                                 <a href="#"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
                             </td>
                         </tr>
