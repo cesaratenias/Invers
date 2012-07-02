@@ -1,5 +1,5 @@
 <?php 
 include '../../../conexion.php'; 
-$sqlEl="SELECT * FROM recurso WHERE tipo='2';";
-$sql= mysql_query($sqlEl);
+$sqlCl="SELECT * FROM persona WHERE tipo='1';";
+$sql= mysql_query($sqlCl);
 ?>
