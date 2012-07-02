@@ -40,11 +40,10 @@
                     <td><?php echo $resMat['descuento'] ?></td>
                     <td><?php echo $resMat['costo'] ?></td>
                     <td>
-                        <a href="#"><img width="13" height="13" src="#" />&nbsp;Consultar</a><br />
-                        <a href="#"><img width="13" height="13" src="#" />&nbsp;Editar</a><br />
-                        <a onclick="if(confirm('Esta seguro que desea borrar el registro?')){
-                                location.href='#' }"><img width="13" height="13" src="#" />&nbsp;Borrar</a>
-                    </td>
+                                <a href="#"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
+                                <a href="#"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
+                                <a href="#"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
+                            </td>
                 </tr>
                 <?php
             }
