@@ -1,6 +1,6 @@
 <?php
-include '../../../conexion.php';
 include_once '../modelos/listar.php';
+include '../../../conexion.php';
 ?>
 <html>
     <head>
@@ -20,35 +20,31 @@ include_once '../modelos/listar.php';
     </head>
     <body>        
         <div align="center">
-            <h2 align="center">Lista de Clientes</h2>
+            <h2 align="center">Lista de Equipos</h2>
             <div align="left">    
-                <a href="nuevo.php?acc=registro&id=0" target="sistema"><img alt="nuevo" width="12" height="12" src="../../../imagenes/nuevo.png" />Nuevo</a>
+                <a href="nuevo.php" target="sistema"><img alt="nuevo" width="12" height="12" src="../../../imagenes/nuevo.png" />Nuevo</a>
             </div>
             <table id="listado" class="table">
                 <thead>
                     <tr>
-                        <th>C&eacute;dula</th>
+                        <th>C&oacute;digo</th>
                         <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Telefono</th>
-                        <th>Direcci&oacute;n</th>
+                        <th>Costo</th>
                         <th>Acciones</th>    
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                     $rows = mysql_num_rows($sql);
-                    while ($resCl = mysql_fetch_array($sql)) {
+                    while ($resEl = mysql_fetch_array($sql)) {
                         ?>
                         <tr>
-                            <td><?php echo $resCl['cedula'] ?></td>
-                            <td><?php echo $resCl['nombre'] ?></td>
-                            <td><?php echo $resCl['apellido'] ?></td>
-                            <td><?php echo $resCl['telefono'] ?></td>
-                            <td><?php echo $resCl['direccion'] ?></td>
+                            <td><?php echo $resEl['cod'] ?></td>
+                            <td><?php echo $resEl['descripcion'] ?></td>
+                            <td>BsF. <?php echo $resEl['costo'] ?></td>
                             <td>
-                                <a href="consultar.php&id=<?php echo $resCl['id'] ?>"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
-                                <a href="nuevo.php&acc=&edicion&id=<?php echo $resCl['id'] ?>"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
+                                <a href="#"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
+                                <a href="#"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
                                 <a href="#"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
                             </td>
                         </tr>
