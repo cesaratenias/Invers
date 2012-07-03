@@ -7,31 +7,36 @@
     if ($_GET['acc'] == 'registro') {
         echo 'Registro de Proveedor';
     } else {
-        echo "Editando \"" . $resProv['nombre'] . "\"";
+        echo "Editando Proveedor";
     }
     ?>
 </h2>
-    <form action='../modelos/guardar.php' method="POST">
+    <form action="<?php if ($_GET['acc'] == 'edicion') { echo "../modelos/guardar.php?acc=editar&id=" . $_GET['id'];
+} else {
+    echo "../modelos/guardar.php?acc=guardar";
+}
+?>" 
+method="POST">
         <table align="center" class="table">
             <tr>
-                <td>Rift</td>
-                <td><input required type="text" name="cedula" value="<?php echo $resProv['cedula'] ?>" autofocus /></td>
+                <td>Rif</td>
+                <td><input required type="text" name="cedula" value="<?php  if (isset($sqlCp)) {echo $sqlCp['cedula'];}?>" autofocus /></td>
             </tr>
             <tr>
                 <td>Nombre</td>
-                <td><input required type="text" name="nombre" value="<?php echo $resProv['nombre'] ?>"/></td>
+                <td><input required type="text" name="nombre" value="<?php  if (isset($sqlCp)) {echo $sqlCp['nombre'];}?>"/></td>
             </tr>
             <tr>
                 <td>Telefono</td>
-                <td><input required type="text" name="telefono" value="<?php echo $resProv['telefono'] ?>"/></td>
+                <td><input required type="text" name="telefono" value="<?php  if (isset($sqlCp)) {echo $sqlCp['telefono'];}?>"/></td>
             </tr>
             <tr>
                 <td>Direccion</td>
-                <td><input required type="text" name="direccion" value="<?php echo $resProv['direccion'] ?>"/></td>
+                <td> <textarea  name="direccion" cols="26" rows="5"><?php  if (isset($sqlCp)) {echo $sqlCp['direccion'];}?></textarea></td>
             </tr>
             <tr>
                 <td>Suministra</td>
-                <td><input required type="text" name="suministro" value="<?php echo $resProv['suministro'] ?>"/></td>
+                <td><input required type="text" name="suministro" value="<?php  if (isset($sqlCp)) {echo $sqlCp['suministro'];}?>"/></td>
             </tr>
         </table>
         <table align ='center'>

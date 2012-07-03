@@ -1,6 +1,6 @@
 <?php
-include_once '../modelos/listar.php';
 include '../../../conexion.php';
+include_once '../modelos/listar.php';
 ?>
 <html>
     <head>

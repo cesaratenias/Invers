@@ -1,12 +1,5 @@
 <?php include '../modelos/consulta.php'; ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
-    <head>
-        <title>Registro de Cliente</title>
-        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-        <meta name="generator" content="Geany 0.19.1" />
-    </head> 
-
     <body >
         <div align="center">
             <img src="../../../imagenes/cliente.jpg" width="80" height="80" />
