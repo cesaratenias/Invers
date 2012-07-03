@@ -1,24 +1,31 @@
 <?php
+$id = $_GET['id'];
 $cedula = $_POST['cedula'];
 $nombre = $_POST['nombre'];
-$apellido = $_POST['apellido'];
-$empresa = $_POST['empresa'];
-$rif = $_POST['rif'];
 $telefono = $_POST['telefono'];
-$suministra = $_POST['suministra'];
 $direccion = $_POST['direccion'];
 $tipo = 3;
 
 $updPro = "UPDATE persona SET ";
 $updPro.= "cedula = '$cedula', ";
-$updPro.= "apellido = '$apellido', ";
-$updPro.= "empresa = '$empresa', ";
-$updPro.= "rif = '$rif', ";
+$updPro.= "nombre = '$nombre', ";
 $updPro.= "telefono = '$telefono', ";
-$updPro.= "suministra = '$suministra', ";
-$updPro.= "pais = '$pais', ";
 $updPro.= "direccion = '$direccion', ";
 $updPro.= "tipo = '$tipo' ";
+$updPro.= "WHERE id = $id";
+
+$sql = mysql_query($updPro);
+$idPer = mysql_insert_id();
+
+$suministra = $_POST['suministro'];
+
+$insPro = "INSERT INTO proveedor (id_persona, suministro) ";
+$insPro.= "VALUES ('$idPer', '$suministra')";
+$sql = mysql_query($insPro);
+
+$updPro = "UPDATE proveedor SET ";
+$updPro.= "id_persona = '$idPer', ";
+$updPro.= "suministro = '$suministro' ";
 $updPro.= "WHERE id = $id";
 
 $sql = mysql_query($updPro);

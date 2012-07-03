@@ -17,7 +17,7 @@
             <table align="center">
                 <tr>
                     <td>C&eacute;dula:</td>
-                    <td><input type="text" name="cedula"   /></td> 
+                    <td><input type="text" name="cedula" /></td> 
                 </tr>
                 <tr>
                     <td align="center">&nbsp;</td>
