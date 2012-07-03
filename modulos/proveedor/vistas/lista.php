@@ -47,10 +47,11 @@ include_once '../modelos/listar.php';
                             <td><?php echo $resProv['direccion'] ?></td>
                             <td><?php echo $resProv['suministro'] ?></td>
                             <td>
-                                <a href="consulta.php?id=<?php echo $resProv['id'] ?>"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
-                                <a href="registro.php?acc=edicion&id=<?php echo $resProv['id'] ?>"img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
-                                <a location.href='../modelos/borrar.php?id=<?php echo $resProv['id'] ?>' }"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
-                           </td>
+                                <a href="consulta.php?id=<?php echo $resProv['id_per'] ?>"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
+                                <a href="registro.php?acc=edicion&id=<?php echo $resProv['id_per'] ?>"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
+                                <a onclick="if (confirm('Esta seguro que desea borrar el registro?')) { 
+                                location.href='../modelos/borrar.php?id=<?php echo $resCl['id'] ?>' }"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
+                            </td>
                             </td>
                         </tr>
                     <?php }
