@@ -22,7 +22,7 @@ include '../../../conexion.php';
         <div align="center">
             <h2 align="center">Lista de Proveedores</h2>
             <div align="left">    
-                <a href="registro.php?acc=registro&pro=0" target="sistema"><img alt="nuevo" width="12" height="12" src="../../../imagenes/nuevo.png" />Nuevo</a>
+                <a href="registro.php?acc=registro" target="sistema"><img alt="nuevo" width="12" height="12" src="../../../imagenes/nuevo.png" />Nuevo</a>
             </div>
             <table id="listado" class="table">
                 <thead>
@@ -47,8 +47,8 @@ include '../../../conexion.php';
                             <td><?php echo $resProv['direccion'] ?></td>
                             <td><?php echo $resProv['suministro'] ?></td>
                             <td>
-                                <a href="registro.php?acc=consulta&tra=<?php echo $resProv['id'] ?>"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
-                                <a href="registro.php?acc=consulta&tra=<?php echo $resProv['id'] ?>"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
+                                <a href="consulta.php?id=<?php echo $resProv['id'] ?>"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
+                                <a href="registro.php?acc=edicion&id=<?php echo $resProv['id'] ?>"img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
                                 <a href="#"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
                             </td>
                         </tr>

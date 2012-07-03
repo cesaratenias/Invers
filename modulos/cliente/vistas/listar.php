@@ -22,7 +22,7 @@ include_once '../modelos/listar.php';
         <div align="center">
             <h2 align="center">Lista de Clientes</h2>
             <div align="left">    
-                <a href="nuevo.php" target="sistema"><img alt="nuevo" width="12" height="12" src="../../../imagenes/nuevo.png" />Nuevo</a>
+                <a href="nuevo.php?acc=registro&id=0" target="sistema"><img alt="nuevo" width="12" height="12" src="../../../imagenes/nuevo.png" />Nuevo</a>
             </div>
             <table id="listado" class="table">
                 <thead>

@@ -1,7 +1,7 @@
 <?php
 include '../../../conexion.php'; 
-$id = $_GET['pro'];
-$sqlCc="SELECT p.*, pro.* FROM persona p INNER JOIN proveedor pro WHERE id.p = $id;";
-$sql= mysql_query($sqlCc);
+$id = $_GET['id'];
+$sqlCc="SELECT p.*, pro.* FROM persona p INNER JOIN proveedor pro ON p.id=pro.id_persona WHERE p.id = $id;";
+$sql= mysql_query($sqlCc); print_r($sqlCc); die();
 $resProv = mysql_fetch_array($sql)
 ?>
