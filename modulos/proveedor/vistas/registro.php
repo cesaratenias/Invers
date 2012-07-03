@@ -1,5 +1,5 @@
 <?php include '../../../conexion.php'; ?>
-<?php include '../modelos/consulta.php'; ?>
+<?php include '../modelos/consultar.php'; ?>
 
 <body >
 <h2 align="center">
@@ -7,7 +7,7 @@
     if ($_GET['acc'] == 'registro') {
         echo 'Registro de Proveedor';
     } else {
-        echo "Editando \"" . $resPro['detalle'] . "\"";
+        echo "Editando \"" . $resProv['nombre'] . "\"";
     }
     ?>
 </h2>

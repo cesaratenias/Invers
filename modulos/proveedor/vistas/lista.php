@@ -32,7 +32,7 @@ include '../../../conexion.php';
                         <th>Telefono</th>
                         <th>Direccion</th>
                         <th>Suministro</th>
-                        <th>Acciones</th>    
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,10 +45,10 @@ include '../../../conexion.php';
                             <td><?php echo $resProv['nombre'] ?></td>
                             <td><?php echo $resProv['telefono'] ?></td>
                             <td><?php echo $resProv['direccion'] ?></td>
-                            <td><?php echo $resProv['suministra'] ?></td>
+                            <td><?php echo $resProv['suministro'] ?></td>
                             <td>
-                                <a href="#"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
-                                <a href="#"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
+                                <a href="registro.php?acc=consulta&tra=<?php echo $resProv['id'] ?>"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
+                                <a href="registro.php?acc=consulta&tra=<?php echo $resProv['id'] ?>"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
                                 <a href="#"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
                             </td>
                         </tr>
