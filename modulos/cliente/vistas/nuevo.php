@@ -16,7 +16,7 @@
         <br />
         <form action="<?php
 if ($_GET['acc'] == 'edicion') {
-    echo "../modelos/editar.php?acc=editar&id=" . $_GET['id'];
+    echo "../modelos/editar.php?id=" . $_GET['id'];
 } else {
     echo "../modelos/guardar.php";
 }

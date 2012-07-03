@@ -55,8 +55,9 @@ include_once '../modelos/listar.php';
                             <td><?php echo $resCl['telefono'] ?></td>
                             <td><?php echo $resCl['direccion'] ?></td>
                             <td>
-                                <a href="nuevo.php&acc=&edicion&id=<?php echo $resCl['id'] ?>"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
-                                <a href="#"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
+                                <a href="nuevo.php?acc=edicion&id=<?php echo $resCl['id'] ?>"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
+                                <a onclick="if (confirm('Esta seguro que desea borrar el registro?')) { 
+                                location.href='../modelos/borrar.php?id=<?php echo $resCl['id'] ?>' }"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
                             </td>
                         </tr>
                     <?php }
