@@ -34,7 +34,7 @@ method="POST">
                 <td> <textarea  name="direccion" cols="26" rows="5"><?php  if (isset($sqlCp)) {echo $sqlCp['direccion'];}?></textarea></td>
             </tr>
             <tr>
-                <td>Suministra</td>
+                <td>Suministro</td>
                 <td><input required type="text" name="suministro" value="<?php  if (isset($sqlCp)) {echo $sqlCp['suministro'];}?>"/></td>
             </tr>
         </table>
