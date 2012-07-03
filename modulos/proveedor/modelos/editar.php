@@ -1,4 +1,6 @@
 <?php
+include '../../../conexion.php';
+
 $id = $_GET['id'];
 $cedula = $_POST['cedula'];
 $nombre = $_POST['nombre'];
@@ -17,26 +19,19 @@ $updPro.= "WHERE id = $id";
 $sql = mysql_query($updPro);
 $idPer = mysql_insert_id();
 
-$suministra = $_POST['suministro'];
-
-$insPro = "INSERT INTO proveedor (id_persona, suministro) ";
-$insPro.= "VALUES ('$idPer', '$suministra')";
-$sql = mysql_query($insPro);
-
-$updPro = "UPDATE proveedor SET ";
-$updPro.= "id_persona = '$idPer', ";
-$updPro.= "suministro = '$suministro' ";
-$updPro.= "WHERE id = $id";
-
-$sql = mysql_query($updPro);
-
 if ($sql) {
-    ?>
-    <script type="text/javascript" language="javascript">
-        location.href='index.php?mod=proveedor&acc=lista&error=f';
-    </script>
+   ?>
+   <center>
+       <div>Guardada satisfactoriamente</div>
+   </center>
+   <script type="text/javascript" language="javascript">
+       setTimeout("location.href='../vistas/lista.php'", 3000);
+   </script>
 <?php } else { ?>
-    <script type="text/javascript" language="javascript">
-        location.href='index.php?mod=proveedor&acc=edicion&error=3';
-    </script>
+   <center>
+       <div>Ha ocurrido un error, contacte al administrador</div>
+   </center>
+   <script type="text/javascript" language="javascript">
+       setTimeout("location.href='../vistas/lista.php'", 3000);
+   </script>
 <?php } ?>

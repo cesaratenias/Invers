@@ -1,4 +1,6 @@
 <?php
+include '../../../conexion.php'; 
+
 $cedula = $_POST['cedula'];
 $nombre = $_POST['nombre'];
 $telefono = $_POST['telefono'];
@@ -17,12 +19,18 @@ $insPro.= "VALUES ('$idPer', '$suministra')";
 $sql = mysql_query($insPro);
 
 if ($sql) {
-    ?>
-    <script type="text/javascript" language="javascript">
-        location.href='../vistas/lista.php';
-    </script>
+   ?>
+   <center>
+       <div>Guardada satisfactoriamente</div>
+   </center>
+   <script type="text/javascript" language="javascript">
+       setTimeout("location.href='../vistas/lista.php'", 3000);
+   </script>
 <?php } else { ?>
-    <script type="text/javascript" language="javascript">
-        location.href='../vistas/registro.php';
-    </script>
+   <center>
+       <div>Ha ocurrido un error, contacte al administrador</div>
+   </center>
+   <script type="text/javascript" language="javascript">
+       setTimeout("location.href='../vistas/lista.php'", 3000);
+   </script>
 <?php } ?>

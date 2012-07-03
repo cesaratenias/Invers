@@ -22,7 +22,7 @@ include_once '../modelos/listar.php';
         <div align="center">
             <h2 align="center">Lista de Proveedores</h2>
             <div align="left">    
-                <a href="registro.php?acc=registro" target="sistema"><img alt="nuevo" width="12" height="12" src="../../../imagenes/nuevo.png" />Nuevo</a>
+                <a href="registro.php?acc=registro&id=0" target="sistema"><img alt="nuevo" width="12" height="12" src="../../../imagenes/nuevo.png" />Nuevo</a>
             </div>
             <table id="listado" class="table">
                 <thead>
@@ -49,7 +49,8 @@ include_once '../modelos/listar.php';
                             <td>
                                 <a href="consulta.php?id=<?php echo $resProv['id'] ?>"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
                                 <a href="registro.php?acc=edicion&id=<?php echo $resProv['id'] ?>"img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
-                                <a href="#"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
+                                <a location.href='../modelos/borrar.php?id=<?php echo $resProv['id'] ?>' }"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
+                           </td>
                             </td>
                         </tr>
                     <?php }

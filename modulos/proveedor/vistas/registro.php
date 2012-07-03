@@ -1,5 +1,7 @@
 <?php include '../../../conexion.php'; ?>
-<?php include '../modelos/consultar.php'; ?>
+<?php include '../modelos/consultar.php'; 
+$sqlCp = mysql_fetch_array($sql);
+?>
 
 <body >
 <h2 align="center">
@@ -11,7 +13,7 @@
     }
     ?>
 </h2>
-    <form action="<?php if ($_GET['acc'] == 'edicion') { echo "../modelos/guardar.php?acc=editar&id=" . $_GET['id'];
+    <form action="<?php if ($_GET['acc'] == 'edicion') { echo "../modelos/editar.php?id=" . $_GET['id'];
 } else {
     echo "../modelos/guardar.php?acc=guardar";
 }
