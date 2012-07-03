@@ -7,14 +7,14 @@
     if ($_GET['acc'] == 'registro') {
         echo 'Registro de Proveedor';
     } else {
-        echo "Editando \"" . $resPro['detalle'] . "\"";
+        echo "Editando Proveedor";
     }
     ?>
 </h2>
     <form action='../modelos/guardar.php' method="POST">
         <table align="center" class="table">
             <tr>
-                <td>Rift</td>
+                <td>Rif</td>
                 <td><input required type="text" name="cedula" value="<?php echo $resProv['cedula'] ?>" autofocus /></td>
             </tr>
             <tr>
