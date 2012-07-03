@@ -1,4 +1,5 @@
-<?php include '../modelos/consulta.php'; ?>
+<?php include '../../../conexion.php'; ?>
+<?php include '../modelos/consultar.php'; ?>
 
 <body >
 <h2 align="center">

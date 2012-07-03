@@ -14,15 +14,15 @@ $suministra = $_POST['suministro'];
 
 $insPro = "INSERT INTO proveedor (id_persona, suministro) ";
 $insPro.= "VALUES ('$idPer', '$suministra')";
-$sql = mysql_query($insPro); print_r($insPro); die();
+$sql = mysql_query($insPro);
 
 if ($sql) {
     ?>
     <script type="text/javascript" language="javascript">
-        location.href='../vistas/lista.php&error=f';
+        location.href='../vistas/lista.php';
     </script>
 <?php } else { ?>
     <script type="text/javascript" language="javascript">
-        location.href='../vistas/registro.php&error=3';
+        location.href='../vistas/registro.php';
     </script>
 <?php } ?>

@@ -50,8 +50,8 @@ include '../../../conexion.php'; ?>
                             <td><?php echo $resTra['area'] ?></td>
                             <td><?php echo $resTra['mantenimiento'] ?></td>
                             <td>
-                                <a href="registro.php?acc=consulta&tra=<?php echo $resTra['id'] ?>"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
-                                <a href="registro.php?acc=edicion&tra=<?php echo $resTra['id'] ?>"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
+                                <a href="consulta.php?id=<?php echo $resTra['id'] ?>"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
+                                <a href="registro.php?acc=edicion&id=<?php echo $resTra['id'] ?>"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
                                 <a href="#"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
                             </td>
                         </tr>

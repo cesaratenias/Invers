@@ -1,4 +1,5 @@
 <?php
+include_once '../../../conexion.php';
 
 $cedula = $_POST['cedula'];
 $nombre = $_POST['nombre'];
@@ -10,8 +11,6 @@ $tipo = '1';
 $sqlCi = "INSERT INTO persona (cedula, nombre, apellido, telefono, direccion, tipo) ";
 $sqlCi.= "VALUES ('$cedula', '$nombre', '$apellido', '$telefono', '$direccion', '$tipo')";
 $sql = mysql_query($sqlCi);
-print_r($sqlCi); 
-//die();
 if ($sql) {
     ?>
     <center>
