@@ -18,7 +18,7 @@
 if ($_GET['acc'] == 'edicion') {
     echo "../modelos/editar.php?acc=editar&id=" . $_GET['id'];
 } else {
-    echo "../modelos/guardar.php?acc=guardar";
+    echo "../modelos/guardar.php";
 }
 ?>" method='POST'>
             <table align="center">
