@@ -1,5 +1,6 @@
 <?php include '../modelos/consulta.php'; ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
     <body >
         <div align="center">
             <img src="../../../imagenes/cliente.jpg" width="80" height="80" />
@@ -15,7 +16,7 @@
         <br />
         <form action="<?php
 if ($_GET['acc'] == 'edicion') {
-    echo "../modelos/guardar.php?acc=editar&id=" . $_GET['id'];
+    echo "../modelos/editar.php?acc=editar&id=" . $_GET['id'];
 } else {
     echo "../modelos/guardar.php?acc=guardar";
 }
