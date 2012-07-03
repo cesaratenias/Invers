@@ -1,70 +1,60 @@
 <?php
-include_once 'conexion.php';
-if (isset($_REQUEST["login"]) && $_REQUEST["clave"]== TRUE){
-$login = $_REQUEST['login'];
-$clave = $_REQUEST['clave'];
+$dbhost = "localhost";  // host del MySQL (generalmente localhost)
+$dbusuario = "root";    // aqui debes ingresar el nombre de usuario
+// para acceder a la base
+$dbpassword = "";    // password de acceso para el usuario de la
+// linea anterior
+$db = "inversiones";    // Seleccionamos la base con la cual trabajar
 
-$sql = "Select * from usuario WHERE login='$login' AND clave='$clave'";
-$Buscar = mysql_query("SELECT * FROM usuario WHERE login = '$login' AND clave = '$clave'");
-$result = mysql_query($sql, $conexion) or die($sql . mysql_error() . "");
-$num_rows = mysql_num_rows($result); //echo $num_rows; exit;
-if($num_rows>0){
-session_start();
-$_SESSION["login"] = $login;
-$_SESSION["clave"] = $clave;
-include ("sesion.php");
-$accion = "recargaadmi";
-$Mensaje = "Bienvenido al Sistema..";}
-if ($num_rows == 0) {
-    $accion = "errorlogeo";
-    $Mensaje = "Usuario o Clave Incorrecta";
-}
+$conexion = mysql_connect($dbhost, $dbusuario, $dbpassword);
+mysql_select_db($db, $conexion);
+
+if (isset($_REQUEST["login"]) && $_REQUEST["clave"] == TRUE) {
+
+    $login = $_REQUEST['login'];
+    $clave = $_REQUEST['clave'];
+    if ($login != "") {
+        $sql = "Select * from usuario WHERE login='$login' AND clave='$clave'";
+        $Buscar = mysql_query("$sql");
+
+        $result = mysql_query($sql, $conexion) or die($sql . mysql_error() . "");
+        $num_rows = mysql_num_rows($result); //echo $num_rows; exit;
+        if ($num_rows > 0) {
+            
+                    session_start();
+                    $_SESSION["login"] = $login;
+                    $_SESSION["clave"] = $clave;
+                    include ("sesion.php");
+                    $accion = "recargaadmi";
+                    $Mensaje = "Bienvenido al Sistema..";
+
+        } elseif ($num_rows == 0) {
+
+            $accion = "errorlogeo";
+            $Mensaje = "Usuario o Clave Incorrecta";
+        }
+    }
 }
 ?>
 
 <script language="javascript">
-
+   
     function recargaadmi(){
         window.location="sistema.html"
         return true;
-    }    
+    }
+    function recargadocen(){
+        window.location="sistema2.html"
+        return true;
+    }
+    function recargasecre(){
+        window.location="sistema3.html"
+        return true;
+    }
     function errorlogeo(){
         window.location="ingreso.php"
         return true;
     }
-
-
-</script>
-
-<script language="JavaScript" type="text/javascript">
-<?PHP
-if ($Mensaje != "") {
-    ?>
-            alert("<?PHP echo $Mensaje; ?>");
-    <?PHP
-//echo $accion ; exit;
-    if ($accion == "recargaadmi") {
-        ?>	
-                    recargaadmi();
-        <?PHP
-    }
-    if ($accion == "recargadocen") {
-        ?>
-                    recargadocen();
-        <?PHP
-    }
-    if ($accion == "recargasecre") {
-        ?>
-                    recargasecre();
-        <?PHP
-    }
-    if ($accion == "errorlogeo") {
-        ?>
-                    errorlogeo();
-        <?PHP
-    }
-}
-?>
 </script>
 <html>
     <head>
@@ -86,11 +76,8 @@ if ($Mensaje != "") {
                     <td width="208" height="98" align="center"><h3><font color="#000000">Ingresar</font></h3></td><td width="332"></td>
                 </tr>
                 <tr>
-                    <td></td><td><img src="imagenes/usuario.jpg" width="25" height="25"></td>
-                    <td width="208" height="44" align="center">
-                        <font color="#000000">Usuario:  
-                        <input required type="text" name="login"/></font></td>
-                    <td></td>
+                    <td></td><td><img src="imagenes/usuario.jpg" width="25" height="25"></td><td width="208" height="44" align="center"><font color="#000000">Usuario:  
+                        <input  type="text" name="login"/></font></td><td></td>
                 <tr>
                     <td></td><td><img src="imagenes/contra.jpg" width="25" height="25"></td><td height="44" align="center"><font color="#000000">Clave: 
                         <input  type="password" name="clave"/></font></td><td></td>
@@ -99,25 +86,60 @@ if ($Mensaje != "") {
                     <td></td><td></td><td><input name="submit" type="submit" class="searchbutton"  onClick="return validar(this.form);" value="Aceptar">
                         <input type="reset" name="boton" value="Cancelar" /></td><td></td>
                 </tr>
-                <tr>
                 </tr>
+                <tr>
+                <tr>
+                <tr>
                 <tr>
                 </tr>
             </table>
-
-        </form>
-
-        <table>
-            <tr height="650"><td><a href="modidoc.php" target="sistema"></a></td>
-            </tr>
         </table>
-        <table align="center"   background="imagenes/fondoa.jpg" width="1252">
-            <tr>
-                <td height="50" align="center"> <span><font  color="#FFFFFF">TSU Maica Rutbell,TSU Maria palacios </font></span></td>
-            </tr>
-        </table>
+        <tr>
+        <tr height="650"><td>
+                <a href="modidoc.php" target="sistema"></a></td>
+        </tr>
+    </table>
 
-    </body>
+
+    <table align="center"   background="imagenes/fondoa.jpg" width="1252">
+        <tr>
+            <td height="50" align="center"> <span><font  color="#FFFFFF">TSU Maica Rutbell,TSU Maria palacios </font></span></td>
+        </tr>
+    </table>
+
+    <script language="JavaScript" type="text/javascript">
+<?PHP
+if ($Mensaje != "") {
+    ?>
+                    alert("<?PHP echo $Mensaje; ?>");
+    <?PHP
+    //echo $accion ; exit;
+    if ($accion == "recargaadmi") {
+        ?>	
+                                        recargaadmi();
+        <?PHP
+    }
+    if ($accion == "recargadocen") {
+        ?>
+                                        recargadocen();
+        <?PHP
+    }
+    if ($accion == "recargasecre") {
+        ?>
+                                        recargasecre();
+        <?PHP
+    }
+    if ($accion == "errorlogeo") {
+        ?>
+                                        errorlogeo();
+        <?PHP
+    }
+}
+?>
+    </script>
+
+</form>
+</body>
 </html>
 
 

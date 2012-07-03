@@ -1,47 +1,43 @@
 <?php include '../../../conexion.php'; ?>
+<?php include '../modelos/consulta.php'; ?>
 
 <body >
-    <div align="center"><font color="#000000" face="normal" size="5"><img src="../../../imagenes/proveedor.jpg" width="70" height="63" /><h2 align="center">Registro de proveedor</h2></font></div>
-    <br />
-    <form actio="<?php
-if ($_GET['acc'] == 'edicion') {
-    echo "../modelos/editar.php&acc=editar&pro=" . $_GET['pro'];
-} else {
-    echo "../modelos/guardar.php";
-}
-?>" method="POST">
+<h2 align="center">
+    <?php
+    if ($_GET['acc'] == 'registro') {
+        echo 'Registro de Proveedor';
+    } else {
+        echo "Editando \"" . $resPro['detalle'] . "\"";
+    }
+    ?>
+</h2>
+    <form action='../modelos/guardar.php' method="POST">
         <table align="center" class="table">
             <tr>
-                <td width="130">Cedula:</td>
-                <td width="151"> <input type="text" name="cedula" /></td>
+                <td>Rift</td>
+                <td><input required type="text" name="cedula" value="<?php echo $resProv['cedula'] ?>" autofocus /></td>
             </tr>
             <tr>
                 <td>Nombre</td>
-                <td><input required type="text" name="nombre" autofocus /></td></tr>
-            <tr>
-                <td>Apellido</td>
-                <td><input required type="text" name="apellido" /></td></tr>
-            <tr>
-            <tr>
-                <td>Rif</td>
-                <td><input required type="text" name="rif" /></td></tr>
-            <tr>
-                <td>Empresa</td>
-                <td><input required type="text" name="empresa" /></td></tr>
+                <td><input required type="text" name="nombre" value="<?php echo $resProv['nombre'] ?>"/></td>
+            </tr>
             <tr>
                 <td>Telefono</td>
-                <td><input required type="text" name="telefono" /></td></tr>
-            <tr>
-                <td>Suministra</td>
-                <td><input required type="text" name="suministra" /></td></tr>
+                <td><input required type="text" name="telefono" value="<?php echo $resProv['telefono'] ?>"/></td>
+            </tr>
             <tr>
                 <td>Direccion</td>
-                <td><input required type="text" name="direccion" /></td></tr>
+                <td><input required type="text" name="direccion" value="<?php echo $resProv['direccion'] ?>"/></td>
+            </tr>
+            <tr>
+                <td>Suministra</td>
+                <td><input required type="text" name="suministro" value="<?php echo $resProv['suministro'] ?>"/></td>
+            </tr>
         </table>
         <table align ='center'>
             <br />
             <center>
-                <input type='submit' name="boton" value='Guardar'>
+                <input type='submit' value='Guardar'>
                 <input type='button' value ='regresar' onclick="location.href='lista.php'">
             </center>
         </table>

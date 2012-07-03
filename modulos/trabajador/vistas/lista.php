@@ -1,7 +1,6 @@
 <?php
 include_once '../modelos/listar.php';
-include '../../../conexion.php';
-?>
+include '../../../conexion.php'; ?>
 <html>
     <head>
         <script type="text/javascript" src="../../../js/jquery.js"></script>
@@ -18,37 +17,41 @@ include '../../../conexion.php';
                 });
         </script>
     </head>
-    <body>        
+    <body>
         <div align="center">
-            <h2 align="center">Lista de Proveedores</h2>
+            <h2 align="center">Lista de Empleados</h2>
             <div align="left">    
                 <a href="registro.php?acc=registro&pro=0" target="sistema"><img alt="nuevo" width="12" height="12" src="../../../imagenes/nuevo.png" />Nuevo</a>
             </div>
             <table id="listado" class="table">
                 <thead>
                     <tr>
-                        <th>Rift</th>
+                        <th>Cedula</th>
                         <th>Nombre</th>
+                        <th>Apellido</th>
                         <th>Telefono</th>
                         <th>Direccion</th>
-                        <th>Suministro</th>
+                        <th>Area</th>
+                        <th>Mantenimiento</th>
                         <th>Acciones</th>    
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                     $rows = mysql_num_rows($sql);
-                    while ($resProv = mysql_fetch_array($sql)) {
+                    while ($resTra = mysql_fetch_array($sql)) {
                         ?>
                         <tr>
-                            <td><?php echo $resProv['cedula'] ?></td>
-                            <td><?php echo $resProv['nombre'] ?></td>
-                            <td><?php echo $resProv['telefono'] ?></td>
-                            <td><?php echo $resProv['direccion'] ?></td>
-                            <td><?php echo $resProv['suministra'] ?></td>
+                            <td><?php echo $resTra['cedula'] ?></td>
+                            <td><?php echo $resTra['nombre'] ?></td>
+                            <td><?php echo $resTra['apellido'] ?></td>
+                            <td><?php echo $resTra['telefono'] ?></td>
+                            <td><?php echo $resTra['direccion'] ?></td>
+                            <td><?php echo $resTra['area'] ?></td>
+                            <td><?php echo $resTra['mantenimiento'] ?></td>
                             <td>
-                                <a href="#"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
-                                <a href="#"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
+                                <a href="registro.php?acc=consulta&tra=<?php echo $resTra['id'] ?>"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
+                                <a href="registro.php?acc=edicion&tra=<?php echo $resTra['id'] ?>"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
                                 <a href="#"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
                             </td>
                         </tr>

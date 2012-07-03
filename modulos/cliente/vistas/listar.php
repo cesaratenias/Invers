@@ -1,6 +1,6 @@
 <?php
-include_once '../modelos/listar.php';
 include '../../../conexion.php';
+include_once '../modelos/listar.php';
 ?>
 <html>
     <head>
@@ -20,7 +20,7 @@ include '../../../conexion.php';
     </head>
     <body>        
         <div align="center">
-            <h2 align="center">Lista de Equipos</h2>
+            <h2 align="center">Lista de Clientes</h2>
             <div align="left">    
                 <a href="nuevo.php" target="sistema"><img alt="nuevo" width="12" height="12" src="../../../imagenes/nuevo.png" />Nuevo</a>
             </div>
@@ -43,12 +43,12 @@ include '../../../conexion.php';
                         <tr>
                             <td><?php echo $resCl['cedula'] ?></td>
                             <td><?php echo $resCl['nombre'] ?></td>
-                            <td>BsF. <?php echo $resCl['apellido'] ?></td>
+                            <td><?php echo $resCl['apellido'] ?></td>
                             <td><?php echo $resCl['telefono'] ?></td>
                             <td><?php echo $resCl['direccion'] ?></td>
                             <td>
-                                <a href="#"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
-                                <a href="#"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
+                                <a href="consultar.php&id=<?php echo $resCl['id'] ?>"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
+                                <a href="nuevo.php&acc=&edicion&id=<?php echo $resCl['id'] ?>"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
                                 <a href="#"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
                             </td>
                         </tr>
