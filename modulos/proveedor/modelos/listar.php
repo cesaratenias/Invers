@@ -1,5 +1,5 @@
 <?php 
 include '../../../conexion.php'; 
-$sqlEl="SELECT * FROM recurso WHERE tipo='2';";
-$sql= mysql_query($sqlEl);
+$sqlCl="SELECT * FROM persona p INNER JOIN proveedor pro ON p.id = pro.id_persona WHERE tipo='3';";
+$sql= mysql_query($sqlCl);
 ?>
