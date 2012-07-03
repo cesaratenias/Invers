@@ -48,7 +48,7 @@ if ($_GET['acc'] == 'edicion') {
             </table>
             </font>
             <table align ='center'>
-                <tr><td align ='center'><input type='submit' name="boton" value='Guardar'></td>
+                <tr><td align ='center'><input type='submit' value='Guardar'></td>
                     <td><input type='submit' name="boton" value ='Cancelar'></td></tr>
             </table>
         </form>
