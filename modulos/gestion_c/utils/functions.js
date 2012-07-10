@@ -1,4 +1,5 @@
-$(document).ready(function(){
+
+$(document).ready(function() {
     $("#mpA").autocomplete({
         source: "../../../autocomplete/recurso.php",
         minLength: 2,
@@ -13,7 +14,7 @@ $(document).ready(function(){
                 return false;
             }
         }
-    })
+    });
 })
 function agregar(mp, cantidad, id, total){
    if(mp == '' || cantidad == ''|| total == ''){
@@ -21,7 +22,7 @@ function agregar(mp, cantidad, id, total){
        $("#mpA").focus();
        return false;
    } else if(id == '') {
-       alert("La materia prima no existe.");
+       alert("El recurso no existe.");
        $("#mpA").val('');
        $("#mpA").focus();
        return false;   

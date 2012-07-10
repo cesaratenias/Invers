@@ -1,6 +1,10 @@
 <?php include '../../../conexion.php'; ?>
 <?php include '../../material/modelos/listar.php'; ?>
+
+<script type="text/javascript" src="../../../js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="../../../js/jquery-ui-1.8.16.custom.min.js"></script>
 <script type="text/javascript" src="../utils/functions.js"></script>
+<link type="text/css" href="../../../css/jquery-ui-1.8.21.custom.css" rel="stylesheet" />
 
 <h2 align="center">Registro de compra</h2>
 <form action="../modelos/guardar.php" method="POST">
@@ -18,7 +22,7 @@
         <tr>
             <td>Descrici&oacute;n de la obra</td>
             <td>
-                <input required type="text" name="convenio" />
+                <input required type="text" name="des" />
             </td>
         </tr>
         <tr>
@@ -35,7 +39,7 @@
         </tr>
         <tr><td><br></td></tr>
         <tr><td><br></td></tr>
-        <table align="center" id="detalle"  class="lista">
+        <table align="center" id="detalle" >
             <thead>
                 <tr>
                     <th>Recurso</th>            
