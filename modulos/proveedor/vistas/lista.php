@@ -4,18 +4,18 @@ include_once '../modelos/listar.php';
 ?>
 <html>
     <head>
-        <script type="text/javascript" src="../../../js/jquery.js"></script>
-        <script type="text/javascript" src="../../../js/jquery-ui-1.8.16.custom.min.js"></script>
+        <script type="text/javascript" src="../../../js/jquery-1.6.2.min.js"></script>
         <script type="text/javascript" src="../../../js/jquery.dataTables.min.js"></script>
         <link type="text/css" href="../../../css/jquery.dataTables.css" rel="stylesheet" />
         <link type="text/css" href="../../../css/estilo.css" rel="stylesheet" />
-        <script>
+         <script>
             $(document).ready(function() {
                 $('#listado').dataTable({
                     "bLengthChange": false,
                     "bJQueryUI": true,
                     "sPaginationType": "full_numbers"
                 });
+            });
         </script>
     </head>
     <body>        
@@ -50,7 +50,7 @@ include_once '../modelos/listar.php';
                                 <a href="consulta.php?id=<?php echo $resProv['id_per'] ?>"><img width="12" height="12" src="../../../imagenes/consulta.png" />Consultar</a><br />
                                 <a href="registro.php?acc=edicion&id=<?php echo $resProv['id_per'] ?>"><img width="12" height="12" src="../../../imagenes/edita.gif" />Editar</a><br />
                                 <a onclick="if (confirm('Esta seguro que desea borrar el registro?')) { 
-                                location.href='../modelos/borrar.php?id=<?php echo $resCl['id'] ?>' }"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
+                                location.href='../modelos/borrar.php?id=<?php echo $resProv['id_per'] ?>' }"><img width="12" height="12" src="../../../imagenes/borrar.png" />Borrar</a><br />
                             </td>
                             </td>
                         </tr>

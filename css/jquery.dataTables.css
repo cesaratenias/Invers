@@ -3,9 +3,9 @@
  * Table
 */
 table.dataTable {
-    margin: 0 auto;
+    margin: 0 98px 3px 0;
     clear: both;
-    width: 100%;
+    width: 75%;
 }
 
 table.dataTable thead th {
@@ -32,9 +32,9 @@ table.dataTable td.dataTables_empty {
 }
 
 table.dataTable tr.odd { background-color: #E2E4FF; }
-table.dataTable tr.even { background-color: white; }
+table.dataTable tr.even { background-color: D3D6FF; }
 
-table.dataTable tr.odd td.sorting_1 { background-color: #D3D6FF; }
+table.dataTable tr.odd td.sorting_1 { background-color: #DADCFF; }
 table.dataTable tr.odd td.sorting_2 { background-color: #DADCFF; }
 table.dataTable tr.odd td.sorting_3 { background-color: #E0E2FF; }
 table.dataTable tr.even td.sorting_1 { background-color: #EAEBFF; }
@@ -63,7 +63,7 @@ table.dataTable tr.even td.sorting_3 { background-color: #F9F9FF; }
  * Filter
 */
 .dataTables_filter {
-    float: right;
+    float: left;
     text-align: right;
 }
 
@@ -74,6 +74,7 @@ table.dataTable tr.even td.sorting_3 { background-color: #F9F9FF; }
 .dataTables_info {
     clear: both;
     float: left;
+    width: 42%;
 }
 
 
@@ -81,7 +82,7 @@ table.dataTable tr.even td.sorting_3 { background-color: #F9F9FF; }
  * Pagination
 */
 .dataTables_paginate {
-    float: right;
+    float: left;
     text-align: right;
 }
 
@@ -135,6 +136,7 @@ table.dataTable tr.even td.sorting_3 { background-color: #F9F9FF; }
 .paging_full_numbers {
     height: 22px;
     line-height: 22px;
+    width: 32%;
 }
 .paging_full_numbers a:active {
     outline: none

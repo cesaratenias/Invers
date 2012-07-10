@@ -4,8 +4,7 @@ include '../../../conexion.php';
 ?>
 <html>
     <head>
-        <script type="text/javascript" src="../../../js/jquery.js"></script>
-        <script type="text/javascript" src="../../../js/jquery-ui-1.8.16.custom.min.js"></script>
+        <script type="text/javascript" src="../../../js/jquery-1.6.2.min.js"></script>
         <script type="text/javascript" src="../../../js/jquery.dataTables.min.js"></script>
         <link type="text/css" href="../../../css/jquery.dataTables.css" rel="stylesheet" />
         <link type="text/css" href="../../../css/estilo.css" rel="stylesheet" />
@@ -16,6 +15,7 @@ include '../../../conexion.php';
                     "bJQueryUI": true,
                     "sPaginationType": "full_numbers"
                 });
+            });
         </script>
     </head>
     <body>        

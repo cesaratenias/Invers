@@ -42,11 +42,10 @@ method="POST">
             </tr>
         </table>
         <table align ='center'>
-            <br />
-            <center>
-                <input type='submit' value='Guardar'>
-                <input type='button' value ='regresar' onclick="location.href='lista.php'">
-            </center>
+            <tr><td align ='center'><input type='submit' value='Guardar'></td>
+                    <td><input type='submit' name="boton" value ='Cancelar'></td>
+                    <td><input type='button' value ='Regresar' onclick="location.href='lista.php'"></td>
+                </tr>
         </table>
     </form>
 </body>

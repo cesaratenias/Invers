@@ -4,25 +4,18 @@ include_once '../modelos/listar.php';
 ?>
 <html>
     <head>
-        <script type="text/javascript" src="../../../js/jquery.js"></script>
-        <script type="text/javascript" src="../../../js/jquery-ui-1.8.16.custom.min.js"></script>
+        <script type="text/javascript" src="../../../js/jquery-1.6.2.min.js"></script>
         <script type="text/javascript" src="../../../js/jquery.dataTables.min.js"></script>
-        <script type="text/javascript" src="../../../utils/functions.php"></script>
         <link type="text/css" href="../../../css/jquery.dataTables.css" rel="stylesheet" />
         <link type="text/css" href="../../../css/estilo.css" rel="stylesheet" />
-        <script>
+         <script>
             $(document).ready(function() {
                 $('#listado').dataTable({
                     "bLengthChange": false,
                     "bJQueryUI": true,
                     "sPaginationType": "full_numbers"
                 });
-                $("#msj").hide()
-                $("#msj").show("fast")
-                setTimeout(function(){
-                    $("#msj").hide("fast")  
-                },3000)
-            }
+            });
         </script>
     </head>
     <body>        
@@ -30,7 +23,7 @@ include_once '../modelos/listar.php';
             <h2 align="center">Lista de Clientes</h2>
 
                        <div align="left">    
-                <a href="nuevo.php?acc=registro&id=0" target="sistema"><img alt="nuevo" width="12" height="12" src="../../../imagenes/nuevo.png" />Nuevo</a>
+                <a href="nuevo.php?acc=registro&id=0" target="sistema"><img alt="nuevo" src="../../../imagenes/nuevo.png" />Nuevo</a>
             </div>
             <table id="listado" class="table">
                 <thead>

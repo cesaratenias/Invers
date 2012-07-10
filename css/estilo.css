@@ -70,3 +70,11 @@ tfoot th, tfoot td {
 	color: #ffffff;
 	height: 21px;
 	}
+.no{width:540px;clear:both;background:url(../images/can.png) no-repeat left #fcfae9;
+border:1px #e9e6c7 solid;background-position:15px 10px;padding:20px 20px 15px 60px;margin:0 0 10px 0;}
+
+.bien{width:540px;clear:both;background:url(../images/bien.png) no-repeat left #edfce9;
+border:1px #cceac4 solid;background-position:15px 10px;padding:20px 20px 15px 60px;margin:0 0 10px 0;}
+
+.error{width:540px;clear:both;background:url(../images/error1.png) no-repeat left #fce9e9;
+border:1px #eac7c7 solid;background-position:15px 10px;padding:20px 20px 15px 60px;margin:0 0 10px 0;}

@@ -6,45 +6,57 @@
         <div align="center">
             <img src="../../../imagenes/cliente.jpg" width="80" height="80" />
             <h2><?php
-            if ($_GET['acc'] == 'edicion') {
-                echo "Editando Cliente";
-            } else {
-                echo 'Registro de Cliente';
-            }
-            ?></h2>
+if ($_GET['acc'] == 'edicion') {
+    echo "Editando Cliente";
+} else {
+    echo 'Registro de Cliente';
+}
+?></h2>
         </div>
         <br />
         <br />
         <form action="<?php
-if ($_GET['acc'] == 'edicion') {
-    echo "../modelos/editar.php?id=" . $_GET['id'];
-} else {
-    echo "../modelos/guardar.php";
-}
+                if ($_GET['acc'] == 'edicion') {
+                    echo "../modelos/editar.php?id=" . $_GET['id'];
+                } else {
+                    echo "../modelos/guardar.php";
+                }
 ?>" method='POST'>
             <table align="center">
                 <tr>
                     <td>C&eacute;dula:</td>
-                    <td><input required type="text" name="cedula" value="<?php  if (isset($sqlCc)) {echo $sqlCc['cedula'];}?>"/></td> 
+                    <td><input required type="text" name="cedula" value="<?php if (isset($sqlCc)) {
+                  echo $sqlCc['cedula'];
+              } ?>"/></td> 
                 </tr>
                 <tr>
                     <td>Nombre:</td>
-                    <td> <input type="text" name="nombre" value="<?php  if (isset($sqlCc)) {echo $sqlCc['nombre'];}?>" /></td></tr>
+                    <td> <input type="text" name="nombre" value="<?php if (isset($sqlCc)) {
+                  echo $sqlCc['nombre'];
+              } ?>" /></td></tr>
                 <tr>
                     <td>Apellido:</td>
-                    <td> <input type="text" name="apellido" value="<?php  if (isset($sqlCc)) {echo $sqlCc['apellido'];}?>" /></td>
+                    <td> <input type="text" name="apellido" value="<?php if (isset($sqlCc)) {
+                  echo $sqlCc['apellido'];
+              } ?>" /></td>
                 </tr>
                 <tr>
                     <td>Telefono:</td>
-                    <td> <input type="text" name="telefono" value="<?php  if (isset($sqlCc)) {echo $sqlCc['telefono'];}?>" /></td></tr>
+                    <td> <input type="text" name="telefono" value="<?php if (isset($sqlCc)) {
+                  echo $sqlCc['telefono'];
+              } ?>" /></td></tr>
                 <tr>
                     <td>Direccion:</td>
-                    <td> <textarea  name="direccion" cols="26" rows="5"><?php  if (isset($sqlCc)) {echo $sqlCc['direccion'];}?></textarea></td></tr>
+                    <td> <textarea  name="direccion" cols="26" rows="5"><?php if (isset($sqlCc)) {
+                  echo $sqlCc['direccion'];
+              } ?></textarea></td></tr>
             </table>
             </font>
             <table align ='center'>
                 <tr><td align ='center'><input type='submit' value='Guardar'></td>
-                    <td><input type='submit' name="boton" value ='Cancelar'></td></tr>
+                    <td><input type='submit' name="boton" value ='Cancelar'></td>
+                    <td><input type='button' value ='Regresar' onclick="location.href='listar.php'"></td>
+                </tr>
             </table>
         </form>
 

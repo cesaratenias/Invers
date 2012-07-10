@@ -21,14 +21,14 @@ $sql = mysql_query($insPro);
 if ($sql) {
    ?>
    <center>
-       <div>Guardada satisfactoriamente</div>
+       <div><img src="../../../imagenes/bien.png"/>Guardada satisfactoriamente</div>
    </center>
    <script type="text/javascript" language="javascript">
        setTimeout("location.href='../vistas/lista.php'", 3000);
    </script>
 <?php } else { ?>
    <center>
-       <div>Ha ocurrido un error, contacte al administrador</div>
+       <div><img src="../../../imagenes/no.png"/>Ha ocurrido un error, contacte al administrador</div>
    </center>
    <script type="text/javascript" language="javascript">
        setTimeout("location.href='../vistas/lista.php'", 3000);

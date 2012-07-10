@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 02-07-2012 a las 15:57:33
+-- Tiempo de generación: 03-07-2012 a las 08:30:57
 -- Versión del servidor: 5.5.16
 -- Versión de PHP: 5.3.8
 
@@ -19,21 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `inversiones`
 --
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `cliente`
---
-
-CREATE TABLE IF NOT EXISTS `cliente` (
-  `cedulacli` varchar(8) NOT NULL,
-  `nombrecli` varchar(15) NOT NULL,
-  `apellidocli` varchar(15) NOT NULL,
-  `telefonocli` varchar(15) NOT NULL,
-  `direccion` varchar(15) NOT NULL,
-  PRIMARY KEY (`cedulacli`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -149,21 +134,52 @@ INSERT INTO `obra` (`id`, `nombre`, `descripcion`, `convenio`, `partida`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `persona`
+--
+
+CREATE TABLE IF NOT EXISTS `persona` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cedula` varchar(13) CHARACTER SET latin1 NOT NULL,
+  `nombre` varchar(20) CHARACTER SET latin1 NOT NULL,
+  `apellido` varchar(20) CHARACTER SET latin1 DEFAULT NULL,
+  `telefono` int(11) NOT NULL,
+  `direccion` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `tipo` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `cedula` (`cedula`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=10 ;
+
+--
+-- Volcado de datos para la tabla `persona`
+--
+
+INSERT INTO `persona` (`id`, `cedula`, `nombre`, `apellido`, `telefono`, `direccion`, `tipo`) VALUES
+(5, '1444588', 'Yohan', 'maart', 2147483647, 'Guaracarima', 1),
+(6, '2222656', 'Junana', 'Silva', 2147483647, 'san mateo', 1),
+(7, '5787854', 'Sindy', 'Monder', 2147483647, 'Mercedes', 1),
+(9, '632222', 'Inversiones Ami', NULL, 2147483647, 'Mercedes', 3);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `proveedor`
 --
 
 CREATE TABLE IF NOT EXISTS `proveedor` (
-  `idprov` int(8) NOT NULL AUTO_INCREMENT,
-  `cedulaprov` varchar(13) NOT NULL,
-  `nombreprov` varchar(15) NOT NULL,
-  `apellidoprov` varchar(15) NOT NULL,
-  `rifprov` varchar(15) NOT NULL,
-  `empresaprov` varchar(15) NOT NULL,
-  `telefonoprov` varchar(10) NOT NULL,
-  `suministraprov` varchar(10) NOT NULL,
-  `direccionprov` varchar(2) NOT NULL,
-  PRIMARY KEY (`idprov`,`cedulaprov`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_persona` int(11) NOT NULL,
+  `suministro` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_persona` (`id_persona`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Volcado de datos para la tabla `proveedor`
+--
+
+INSERT INTO `proveedor` (`id`, `id_persona`, `suministro`) VALUES
+(2, 8, 'todo'),
+(3, 9, 'todo');
 
 -- --------------------------------------------------------
 
@@ -200,17 +216,20 @@ INSERT INTO `recurso` (`id`, `cod`, `descripcion`, `costo`, `tipo`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `trabajador` (
-  `idtra` int(8) NOT NULL,
-  `cedulatra` varchar(13) NOT NULL,
-  `nombretra` varchar(15) NOT NULL,
-  `apellidotra` varchar(15) NOT NULL,
-  `telefonotra` varchar(15) NOT NULL,
-  `celulartra` varchar(15) NOT NULL,
-  `direcciontra` varchar(10) NOT NULL,
-  `areatra` varchar(10) NOT NULL,
-  `mantenimientotra` varchar(2) NOT NULL,
-  PRIMARY KEY (`idtra`)
+  `id` int(11) NOT NULL,
+  `id_persona` int(11) NOT NULL,
+  `area` varchar(15) NOT NULL,
+  `mantenimiento` varchar(15) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_persona` (`id_persona`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `trabajador`
+--
+
+INSERT INTO `trabajador` (`id`, `id_persona`, `area`, `mantenimiento`) VALUES
+(0, 2, 'Todas', 'Si');
 
 -- --------------------------------------------------------
 

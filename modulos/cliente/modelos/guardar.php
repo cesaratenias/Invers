@@ -14,7 +14,7 @@ $sql = mysql_query($sqlCi);
 if ($sql) {
     ?>
     <center>
-        <div>Guardada satisfactoriamente</div>
+        <div><img src="../../../imagenes/bien.png"/>Guardada satisfactoriamente</div>
     </center>
     <script type="text/javascript" language="javascript">
         setTimeout("location.href='../vistas/listar.php'", 3000);
